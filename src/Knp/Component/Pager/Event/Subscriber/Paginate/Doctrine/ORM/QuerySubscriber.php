@@ -29,7 +29,7 @@ class QuerySubscriber implements EventSubscriberInterface
             $useDoctrineOutputWalker = false;
             if (version_compare(\Doctrine\ORM\Version::VERSION, '2.3.0', '>=')) {
                 $useDoctrineWalkers = true;
-                $useDoctrineOutputWalker = true;
+                //$useDoctrineOutputWalker = true; // Fix Pagination Count for using Gedmo Translatable TranslationWalker Hint
             } else if (version_compare(\Doctrine\ORM\Version::VERSION, '2.2.0', '>=')) {
                 $useDoctrineWalkers = true;
             }
